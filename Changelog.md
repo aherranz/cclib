@@ -11,6 +11,8 @@
 
 ## Next release
 
+## v0.4.8
+
 - [T] Makefile added
 - [T] Changelog.md added
 - [T] README.md added
