@@ -9,6 +9,8 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    // // Support for building a distribution ZIP for a Java library (JAR file for the library and its dependencies)
+    // id 'java-library-distribution'
 }
 
 version = "0.4.8"
@@ -29,3 +31,15 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
+
+// Add source to jar files (by default jar tasks only include compiled classes)
+jar {
+    from sourceSets.main.allSource
+}
+
+// Task to zip documentation
+task buildDoc(type: Zip, dependsOn: javadoc) {
+    from 'build/docs'
+    archiveName rootProject.name+"-"+version+"-docs.zip"
+}
+
