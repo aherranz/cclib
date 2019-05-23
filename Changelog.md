@@ -11,6 +11,7 @@
 
 ## Next release
 
+- [T] Makefile added
 - [T] Changelog.md added
 - [T] README.md added
 - [+] Bringing current implementation of cclib (0.4.8) under git
