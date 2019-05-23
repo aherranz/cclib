@@ -6,12 +6,7 @@ cclib is a Java library used in concurrency related course at Universidad Polit√
 
 Run `make` or `./gradlew tasks` and follow instructions.
 
-## TODO
-
-- Tryer.java to take advantage from generics (result type) and lambda.
-- Check of mean times are really the mean of the indicated value: for
-  instance, nextInt(2 * n) generates an integer from 0 to 2n-1, this
-  means the mean is (2n-1)/2 that is not n.
+We are following the git workflow *git flow*: https://guides.github.com/introduction/flow/
 
 ## Classes in the cclib
 
@@ -51,3 +46,11 @@ The rest of the classes are used in the class assignments. Most names are in Spa
   in a shot).
 - Productor (producer): instances are threads that simulate
   production and storage of products
+
+## TODO
+
+- Tryer.java to take advantage from generics (result type) and lambda.
+- Check of mean times are really the mean of the indicated value: for
+  instance, nextInt(2 * n) generates an integer from 0 to 2n-1, this
+  means the mean is (2n-1)/2 that is not n.
+
