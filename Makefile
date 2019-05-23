@@ -11,7 +11,7 @@ build:
 
 BRANCH := $(shell git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
-pull:	
+pull:
 	git fetch --prune
 	git checkout master && git merge origin/master
 	git checkout develop && git merge origin/develop
