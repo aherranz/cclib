@@ -4,7 +4,7 @@ cclib is a Java library used in concurrency related course at Universidad Polit√
 
 ## Building the Library
 
-Run `./gradlew tasks` and follow instructions.
+Run `make` or `./gradlew tasks` and follow instructions.
 
 ## TODO
 
