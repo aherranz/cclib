@@ -49,6 +49,8 @@ The rest of the classes are used in the class assignments. Most names are in Spa
 
 ## TODO
 
+- The library should be split, one for concurrency mechanisms, another
+  for classes used in "Concurrencia" assignments at UPM.
 - Tryer.java to take advantage from generics (result type) and lambda.
 - Check of mean times are really the mean of the indicated value: for
   instance, nextInt(2 * n) generates an integer from 0 to 2n-1, this
