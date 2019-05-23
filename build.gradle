@@ -11,6 +11,8 @@ plugins {
     id 'java-library'
 }
 
+version = "0.4.8"
+
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
