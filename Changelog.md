@@ -11,6 +11,7 @@
 
 ## Next release
 
+- [F] volatile modifier to every integer attribute in Monitor: inPurgatory, pendingSignals and meanSleepTimeAfterAwait.
 - [F] Fabrica and Consumo allow 0 mean times now.
 
 ## v0.4.8
