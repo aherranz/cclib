@@ -11,6 +11,8 @@
 
 ## Next release
 
+- [F] Fabrica and Consumo allow 0 mean times now.
+
 ## v0.4.8
 
 - [T] Makefile added
