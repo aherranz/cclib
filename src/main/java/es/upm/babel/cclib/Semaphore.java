@@ -29,7 +29,7 @@ public class Semaphore {
    public Semaphore() {
       n = new java.util.concurrent.Semaphore(0,true);
    }
-   
+
    /**
     * Semaphore constructor. Internal counter initizalised to n if n
     * is positive, 0 otherwise.
@@ -38,7 +38,7 @@ public class Semaphore {
       int i = n > 0 ? n : 0;
       this.n = new java.util.concurrent.Semaphore(i,true);
    }
-   
+
    /**
     * If the parameter is greater than 0 more arbitrary interleavings
     * will be introduced.
