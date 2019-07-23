@@ -13,7 +13,7 @@ plugins {
     // id 'java-library-distribution'
 }
 
-version = "0.4.8"
+version = "0.4.9"
 
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -42,4 +42,3 @@ task buildDoc(type: Zip, dependsOn: javadoc) {
     from 'build/docs'
     archiveName rootProject.name+"-"+version+"-docs.zip"
 }
-

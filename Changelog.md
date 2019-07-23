@@ -11,6 +11,8 @@
 
 ## Next release
 
+## v0.4.9
+
 - [F] volatile modifier to every integer attribute in Semaphore: meanSleepTimeAfterAwait_ms.
 - [F] volatile modifier to every integer attribute in Monitor: inPurgatory, pendingSignals and meanSleepTimeAfterAwait.
 - [F] Fabrica and Consumo allow 0 mean times now.
