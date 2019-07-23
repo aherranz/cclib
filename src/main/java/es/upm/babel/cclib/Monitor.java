@@ -24,13 +24,13 @@ public class Monitor {
     * Number of threads that were moved to the purgatory and have not
     * reached heaven yet (they may have been signalled).
     */
-   private int inPurgatory = 0;
+   private volatile int inPurgatory = 0;
 
    /**
     * Number of signalled threads which have not completed monitor
     * re-entrance, not counting those signalled in purgatory.
     */
-   private int pendingSignals = 0;
+   private volatile int pendingSignals = 0;
 
    /**
     * In order to force more arbitrary interleavings on the use of
@@ -39,7 +39,7 @@ public class Monitor {
     * no sleep will be executed and the interleaving will be the
     * "natural" one.
     */
-   private int meanSleepTimeAfterAwait_ms = 0;
+   private volatile int meanSleepTimeAfterAwait_ms = 0;
 
    /**
     * Random number generator for sleeping time after await.

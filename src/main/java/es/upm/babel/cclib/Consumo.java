@@ -33,18 +33,10 @@ public class Consumo {
      * Simula el consumo de un producto.
      */
     static public void consumir(Producto prod) {
-        int t;
-        ConcIO.printfnl("inicio consumo: " + prod + "...");
-        t = random.nextInt(2 * tiempo_medio_cons_ms);
-        try {
-            Thread.sleep(t);
-        } catch (Exception ex) {
-            ConcIO.printfnl("excepción capturada: " + ex);
-            ex.printStackTrace();
-        } finally {
-            ConcIO.printfnl("fin consumo en " + t + "ms.");
-        }
-    }        
+      ConcIO.printfnl("inicio consumo: " + prod + "...");
+      simularConsumo(prod);
+      ConcIO.printfnl("fin consumo: " + prod);
+    }
 
     /**
      * Simula el consumo de un <em>paquete</em> de productos.
@@ -53,19 +45,27 @@ public class Consumo {
         ConcIO.printfnl("inicio consumo de "
                         + prods.length + " productos...");
         for (int i = 0; i < prods.length; i++) {
-           int t;
-           t = random.nextInt(2 * tiempo_medio_cons_ms);
-           try {
-              Thread.sleep(t);
-           } catch (Exception ex) {
-              ConcIO.printfnl("excepción capturada: " + ex);
-              ex.printStackTrace();
-           } finally {
-              ConcIO.printfnl("consumido producto "
-                              + prods[i] + " en " + t + "ms.");
-           }
+          simularConsumo(prods[i]);
+          ConcIO.printfnl("producto consumido: " + prods[i]);
         }
         ConcIO.printfnl("fin consumo del paquete de "
                         + prods.length + " productos");
-    }        
+    }
+
+    /**
+     * Simula el consumo de un producto.
+     *
+     * @return tiempo de consumo
+     */
+    static public void simularConsumo(Producto prod) {
+      if (tiempo_medio_cons_ms > 0) {
+        int t = random.nextInt(2 * tiempo_medio_cons_ms);
+        try {
+          Thread.sleep(t);
+        } catch (Exception ex) {
+          ConcIO.printfnl("excepción capturada: " + ex);
+          ex.printStackTrace();
+        }
+      }
+    }
 }

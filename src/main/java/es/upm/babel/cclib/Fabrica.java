@@ -34,18 +34,9 @@ public class Fabrica {
      */
     static public Producto producir() {
         Producto prod;
-        int t;
         ConcIO.printfnl("inicio producción...");
-        t = random.nextInt(2 * tiempo_medio_prod_ms);
-        try {
-            Thread.sleep(t);
-        } catch (Exception ex) {
-            ConcIO.printfnl("excepción capturada: " + ex);
-            ex.printStackTrace();
-        } finally {
-            prod = new Producto();
-            ConcIO.printfnl("fin producción: " + prod + " en " + t + "ms.");
-        }
+        prod = simularProduccion();
+        ConcIO.printfnl("fin producción: " + prod);
         return prod;
     }
 
@@ -57,21 +48,27 @@ public class Fabrica {
         ConcIO.printfnl("inicio producción de "
                         + prods.length + " productos...");
         for (int i = 0; i < prods.length; i++) {
-           int t;
-           t = random.nextInt(2 * tiempo_medio_prod_ms);
-           try {
-              Thread.sleep(t);
-           } catch (Exception ex) {
-              ConcIO.printfnl("excepción capturada: " + ex);
-              ex.printStackTrace();
-           } finally {
-              prods[i] = new Producto();
-              ConcIO.printfnl("producido producto: "
-                              + prods[i] + " en " + t + "ms.");
-           }
+          prods[i] = simularProduccion();
+          ConcIO.printfnl("producto producido: " + prods[i]);
         }
         ConcIO.printfnl("fin producción del paquete de "
                         + prods.length + " productos");
         return prods;
+    }
+
+    /**
+     * Simula una producción de un producto.
+     */
+    static private Producto simularProduccion() {
+      if (tiempo_medio_prod_ms > 0) {
+        int t = random.nextInt(2 * tiempo_medio_prod_ms);
+        try {
+          Thread.sleep(t);
+        } catch (Exception ex) {
+          ConcIO.printfnl("excepción capturada: " + ex);
+          ex.printStackTrace();
+        }
+      }
+      return new Producto();
     }
 }
