@@ -16,7 +16,7 @@ public class Semaphore {
     * no sleep will be executed and the interleaving will be the
     * "natural" one.
     */
-   static private int meanSleepTimeAfterAwait_ms = 0;
+   static private volatile int meanSleepTimeAfterAwait_ms = 0;
 
    /**
     * Random number generator for sleeping time after await.
