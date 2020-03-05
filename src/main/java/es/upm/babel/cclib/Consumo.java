@@ -54,8 +54,6 @@ public class Consumo {
 
     /**
      * Simula el consumo de un producto.
-     *
-     * @return tiempo de consumo
      */
     static public void simularConsumo(Producto prod) {
       if (tiempo_medio_cons_ms > 0) {

@@ -11,6 +11,8 @@
 
 ## Next release
 
+- [T] javadoc warning fixed in Consumo.java: @return tag cannot be used in method with void return type.
+
 ## v0.4.9
 
 - [F] volatile modifier to every integer attribute in Semaphore: meanSleepTimeAfterAwait_ms.
