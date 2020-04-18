@@ -10,7 +10,7 @@ public abstract class Tryer extends Thread {
    volatile private boolean raisedException = false;
    volatile private Throwable throwable = null; 
 
-   public boolean started() {
+   public boolean hasStarted() {
       return started;
    }
 
