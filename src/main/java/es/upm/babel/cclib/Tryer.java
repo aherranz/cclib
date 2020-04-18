@@ -10,6 +10,10 @@ public abstract class Tryer extends Thread {
    volatile private boolean raisedException = false;
    volatile private Throwable throwable = null; 
 
+   public boolean hasStarted() {
+      return started;
+   }
+
    public boolean isBlocked() {
       if (!started) gimmeTime(0);
       return blocked;
