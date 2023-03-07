@@ -1,3 +1,5 @@
+DO NOT USE THIS REPO, USE THE GITLAB ONE INSTEAD: https://gitlab.com/babel-upm/cclib
+
 # es.upm.babel.cclib
 
 cclib is a Java library used in concurrency related course at Universidad Politécnica de Madrid.
