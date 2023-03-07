@@ -7,7 +7,7 @@ usage:
 	@echo "  make push # to push git flow branches"
 
 build:
-	./gradlew build
+	./gradlew build buildDoc
 
 BRANCH := $(shell git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
